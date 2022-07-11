@@ -53,8 +53,8 @@ window.addEventListener("DOMContentLoaded", () => {
       const newTime = msToTime(timeLeft)
       timer.innerText = newTime;
       updateTimer(timer)
-      let firstHalf = timer.split(":")[0]
-      let secondHalf = timer.split(":")[1]
+      let firstHalf = timer.split(":")
+      let secondHalf = timer.split(":").split(":")
       console.log(firstHalf + " : " + secondHalf)
       } else {
         alarm()
