@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
       audio.pause()
     })
     countdown.appendChild(button)
-    audio.volume = .1;
+    audio.volume = .2;
     audio.play()
   }
 
@@ -52,7 +52,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if (timeLeft > 0) {
       const newTime = msToTime(timeLeft)
       timer.innerText = newTime;
-      updateTimer(timeLeft)
+      updateTimer(timer)
       } else {
         alarm()
       }
