@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if (timeLeft > 0) {
       const newTime = msToTime(timeLeft)
       console.log(newTime.substring(0, 5))
-      timer.innerText = newTime.substring(0, 5);
+      timer.innerText = newTime;
       updateTimer(timer)
       } else {
         console.log('Timer done')
