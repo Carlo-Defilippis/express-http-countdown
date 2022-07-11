@@ -9,6 +9,7 @@ body {
   font-family: "Roboto";
   background-color: rgb(243, 170, 34);
   color: #333;
+  height: 100vh;
 }
 
 #entryForm {
