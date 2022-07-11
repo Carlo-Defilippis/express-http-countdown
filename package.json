@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cellomatt/http-server-countdown-timer.git"
+    "url": "git+https://github.com/Carlo-Defilippis/express-http-countdown"
   },
   "keywords": [],
   "author": "",
