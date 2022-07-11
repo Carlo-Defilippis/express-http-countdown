@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
 
   const timer = document.getElementById("timer")
-  const timeLeft = timer.innerText.substring(0, 5)
+  const timeLeft = timer.innerText.split(":")
   let endtime = new Date()
   let currentHours = endtime.getHours()
   let currentMinutes = endtime.getMinutes()
