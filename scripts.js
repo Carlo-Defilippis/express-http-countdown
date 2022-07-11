@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const timeLeft = endtime - now
     if (timeLeft > 0) {
       const newTime = msToTime(timeLeft)
-      console.log(newTime)
+      console.log(newTime.substring(0, 4))
       timer.innerText = newTime;
       updateTimer(timer)
       } else {
