@@ -32,19 +32,6 @@ window.addEventListener("DOMContentLoaded", () => {
     return hours + ":" + minutes;
   }
 
-  function alarm() {
-    let audio = document.getElementById('audio')
-    let countdown = document.getElementById('countdown');
-    let button = document.createElement('button')
-    button.innerText = "Stop"
-    button.addEventListener("click", () => {
-      audio.pause()
-    })
-    countdown.appendChild(button)
-    audio.volume = .2;
-    audio.play()
-  }
-
   function updateTimer(timer) {
     setTimeout(()=>{
     const now = new Date()
@@ -54,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
       timer.innerText = newTime;
       updateTimer(timer)
       } else {
-        alarm()
+        console.log('Timer done')
       }
 
     }, 300)
