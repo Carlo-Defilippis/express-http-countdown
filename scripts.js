@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
     currentHours += 1
     currentMinutes -= 60
   }
-  endtime.setHours(currentHours, currentMinutes)
+  endtime.setHours(currentHours, currentMinutes, currentSeconds)
 
   function msToTime(duration) {
     let seconds = Math.floor((duration / 1000) % 60);
@@ -38,6 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const timeLeft = endtime - now
     if (timeLeft > 0) {
       const newTime = msToTime(timeLeft)
+      console.log(newTime)
       timer.innerText = newTime;
       updateTimer(timer)
       } else {
