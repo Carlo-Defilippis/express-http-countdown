@@ -36,9 +36,10 @@ window.addEventListener("DOMContentLoaded", () => {
     setTimeout(()=>{
     const now = new Date()
     const timeLeft = endtime - now
+    console.log(endtime, now, timeLeft)
     if (timeLeft > 0) {
       const newTime = msToTime(timeLeft)
-      console.log(newTime.substring(0, 4))
+      console.log(newTime.substring(0, 5))
       timer.innerText = newTime;
       updateTimer(timer)
       } else {
