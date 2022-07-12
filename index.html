@@ -118,9 +118,25 @@
       </div>
       <button type="submit">Start</button>
     </form>
-    <p>#{timeLeft}</p>
+    <p id="timer-text"></p>
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+    <form method="POST" action="/" target="dummyframe" id="pause-form">
 
-      <button id="pause">Pause</button>
+      <select name="hours" style="display: none;">
+        <option id="pause-hours">5</option>
+      </select>
+
+      <select name="minutes" style="display: none;">
+        <option id="pause-minutes">4</option>
+      </select>
+
+      <select name="seconds" style="display: none;">
+        <option id="pause-seconds">0</option>
+      </select>
+      <h3 id="pause-message" style="color: white; text-align: center;">Timer Paused</h3>
+      <button type="submit" id="pause">Pause</button>
+
+    </form>
 
   </body>
 

@@ -135,6 +135,29 @@ const server = http.createServer((req, res) => {
       return res.end();
     }
 
+    if (req.method === "POST" && req.url === "/") {
+      endtime = new Date()
+      let currentHours = endtime.getHours()
+      let currentMinutes = endtime.getMinutes()
+      let currentSeconds = endtime.getSeconds()
+
+      currentHours += Number(req.body.hours)
+      currentMinutes += Number(req.body.minutes)
+      currentSeconds += Number(req.body.seconds)
+      if (currentSeconds > 59) {
+        currentMinutes += 1
+        currentSeconds -= 60
+      }
+      if (currentMinutes > 59) {
+        currentHours += 1
+        currentMinutes -= 60
+      }
+      endtime.setHours(currentHours, currentMinutes, currentSeconds)
+      res.writeHead(200, {
+        'Content-Type': 'text/html'
+      });
+      return res.end();
+    }
 
   });
 });
