@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="./stylesheets/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./pause.js"></script>
     <title>Countdown App</title>
   </head>
 
   <body>
     <h1>Select the Timer Length:</h1>
-    <form method="POST" action="/timer" id="entryForm">
+    <form method="POST" action="/timer" target="_blank" id="entryForm">
       <div className="inputs">
         <label for="hours">Hours:</label>
         <select name="hours">
@@ -116,6 +118,10 @@
       </div>
       <button type="submit">Start</button>
     </form>
+    <p>#{timeLeft}</p>
+
+      <button id="pause">Pause</button>
+
   </body>
 
 </html>

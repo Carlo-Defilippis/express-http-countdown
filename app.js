@@ -16,6 +16,7 @@ function msToTime(duration) {
 }
 
 
+
 const server = http.createServer((req, res) => {
   let reqBody = '';
 
@@ -46,6 +47,17 @@ const server = http.createServer((req, res) => {
 
     if (req.url === "/scripts.js") {
       var file =  __dirname + "/scripts.js";
+      var stat = fs.statSync(file);
+      res.writeHead(200, {
+        'Content-Type': 'text/javascript',
+        'Content-Length': stat.size
+      });
+      var readStream = fs.createReadStream(file);
+      readStream.pipe(res);
+    }
+
+    if (req.url === "/pause.js") {
+      var file =  __dirname + "/pause.js";
       var stat = fs.statSync(file);
       res.writeHead(200, {
         'Content-Type': 'text/javascript',
